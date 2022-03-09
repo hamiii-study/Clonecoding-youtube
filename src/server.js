@@ -8,6 +8,9 @@ const PORT = 5000;
 const app = express(); //server = application 만들기
 
 const logger = morgan("dev");
+
+app.set("view engine", "pug");
+app.set("views", process.cwd() + "/src/views");
 app.use(logger);
 
 //create router
